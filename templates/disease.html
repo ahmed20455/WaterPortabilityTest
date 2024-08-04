@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Waterborne Diseases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #5AB2FF, #A0DEFF, #003285);
+            background-size: 300% 300%;
+            background-position: center;
+            animation: gradientAnimation 12s ease-in-out infinite;
+            color: #333;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .disease {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .disease-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33.33% - 40px);
+            text-align: center;
+        }
+        .disease-card h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #555;
+        }
+        .disease-card p {
+            color: #777;
+            line-height: 1.6;
+        }
+        .disease-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Major Waterborne Diseases</h1>
+        <div class="disease">
+            <div class="disease-card">
+                <h2>Cholera</h2>
+                <p>Cholera is an infectious disease caused by the Vibrio cholerae bacterium. It leads to severe diarrhea and dehydration, potentially causing death if untreated.</p>
+            </div>
+            <div class="disease-card">
+                <h2>Typhoid Fever</h2>
+                <p>Typhoid fever is caused by the Salmonella typhi bacterium. It spreads through contaminated food and water and can lead to high fever, abdominal pain, and in severe cases, complications affecting multiple organs.</p>
+            </div>
+            <div class="disease-card">
+                <h2>Hepatitis A</h2>
+                <p>Hepatitis A is a viral liver infection transmitted through contaminated water or food. It can cause flu-like symptoms and jaundice, with symptoms ranging from mild to severe.</p>
+            </div>
+            <div class="disease-card">
+                <h2>Cryptosporidiosis</h2>
+                <p>Cryptosporidiosis is caused by the protozoan parasite <em>Cryptosporidium</em>. It spreads through ingestion of contaminated water or food, or through contact with infected persons or animals. Symptoms include watery diarrhea, stomach cramps, nausea, and fever.</p>
+            </div>
+    
+            <div class="disease-card">
+                <h2>Amoebiasis</h2>
+                <p>Amoebiasis is caused by the protozoan parasite <em>Entamoeba histolytica</em>. It spreads through ingestion of contaminated food or water containing cysts of the parasite. Symptoms range from mild diarrhea to dysentery (with blood and mucus in stools) and can lead to severe complications.</p>
+            </div>
+            
+        </div>
+        <a class="back-link" href="/">Back to Form</a>
+    </div>
+</body>
+</html>

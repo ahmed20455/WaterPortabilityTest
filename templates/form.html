@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Testing</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(60deg, #5AB2FF, #A0DEFF, #003285);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .form-container {
+            background-color: rgba(235, 244, 246, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            background-image: linear-gradient(white, white), linear-gradient(60deg, #5AB2FF, #A0DEFF, #003285);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .info-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .info-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Water Quality Testing</h2>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="ph">pH (0-14)</label>
+                <input type="text" id="ph" name="ph" placeholder="0.00000" required>
+            </div>
+            <div class="form-group">
+                <label for="hardness">Hardness (mg/L)</label>
+                <input type="text" id="hardness" name="hardness" placeholder="000.0000" required>
+            </div>
+            <div class="form-group">
+                <label for="solids">Solids (ppm)</label>
+                <input type="text" id="solids" name="solids" placeholder="00000.00" required>
+            </div>
+            <div class="form-group">
+                <label for="chloramines">Chloramines (ppm)</label>
+                <input type="text" id="chloramines" name="chloramines" placeholder="0.000000" required>
+            </div>
+            <div class="form-group">
+                <label for="sulfate">Sulfate (mg/L)</label>
+                <input type="text" id="sulfate" name="sulfate" placeholder="000.0000" required>
+            </div>
+            <div class="form-group">
+                <label for="conductivity">Conductivity (µS/cm)</label>
+                <input type="text" id="conductivity" name="conductivity" placeholder="000.0000" required>
+            </div>
+            <div class="form-group">
+                <label for="organic_carbon">Organic Carbon (ppm)</label>
+                <input type="text" id="organic_carbon" name="organic_carbon" placeholder="00.00000" required>
+            </div>
+            <div class="form-group">
+                <label for="trihalomethanes">Trihalomethanes (µg/L)</label>
+                <input type="text" id="trihalomethanes" name="trihalomethanes" placeholder="00.00000" required>
+            </div>
+            <div class="form-group">
+                <label for="turbidity">Turbidity (NTU)</label>
+                <input type="text" id="turbidity" name="turbidity" placeholder="0.000000" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <a class="info-link" href="/info">Dataset Information</a>
+        <a class="info-link" href="/diseases">Water Borne Diseases</a>
+        <a class="info-link" href="/Aboutus">About Creators</a>
+    </div>
+</body>
+</html>

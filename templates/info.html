@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Information</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #5AB2FF, #A0DEFF, #003285);
+            background-size: 300% 300%;
+            animation: gradient 12s ease infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .info-container {
+            background-color: rgba(235, 244, 246, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+            max-width: 90%;
+            margin: auto;
+        }
+        .info-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .info-container p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .info-container p strong {
+            color: #007BFF;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <h2>Dataset Information</h2>
+        <p>
+            Access to safe drinking water is crucial for health, recognized as a fundamental human right and a cornerstone of effective health protection policies. It holds significant importance at national, regional, and local levels as a vital component of public health and development. Evidence indicates that investments in water supply and sanitation can deliver a positive economic impact in certain areas, where the benefits of reducing health risks and healthcare expenditures outweigh the costs of implementing such interventions.
+        </p>
+        <p>
+            This dataset contains various parameters related to water quality, including pH levels, hardness, solids, chloramines, sulfate, conductivity, organic carbon, trihalomethanes, and turbidity. Each parameter plays a crucial role in determining the overall quality of water.
+        </p>
+        <p>
+            1. <strong>pH Value:</strong>
+            pH is a critical parameter for assessing the acidity or alkalinity of water. It serves as an indicator of the water's acid-base balance. The World Health Organization (WHO) recommends a pH range of <strong>6.5 to 8.5</strong>. In this study, pH values ranged from 6.52 to 6.83, falling within WHO standards.
+        </p>
+        <p>
+            2. <strong>Hardness:</strong> Hardness primarily results from calcium and magnesium salts dissolved from geological formations through which water passes. The duration of contact between water and hardness-producing materials determines the level of hardness in raw water. Initially defined by its ability to precipitate soap due to calcium and magnesium, hardness is a crucial water quality parameter.
+        </p>
+        <p>
+            3. <strong>Solids</strong> (Total dissolved solids - TDS): Water has the capacity to dissolve a variety of inorganic and some organic minerals or salts such as potassium, calcium, sodium, bicarbonates, chlorides, magnesium, and sulfates. These minerals can impart undesired taste and color to water. TDS levels above 500 mg/l indicate high mineralization, with a recommended limit for drinking purposes of 1000 mg/l.
+        </p>
+        <p>
+            4. <strong>Chloramines:</strong> Chlorine and chloramine are primary disinfectants used in public water systems. Chloramines are typically formed by adding ammonia to chlorine during water treatment. Chlorine levels up to 4 mg/L (or 4 parts per million) are considered safe for drinking water.
+        </p>
+        <p>
+            5. <strong>Sulfate:</strong> Sulfates are naturally occurring substances found in minerals, soil, rocks, groundwater, plants, and food. They are widely used in the chemical industry. In freshwater, sulfate concentrations range from 3 to 30 mg/L, with higher concentrations (up to 1000 mg/L) found in certain areas.
+        </p>
+        <p>
+            6. <strong>Conductivity:</strong> Pure water is a poor conductor of electricity due to its low ion concentration. Increased ion concentration enhances water's electrical conductivity. Electrical conductivity (EC) measures the ionic activity of a solution, with WHO standards recommending values not exceeding <strong>400 μS/cm</strong>.
+        </p>
+        <p>
+            7. <strong>Organic Carbon:</strong> Total Organic Carbon (TOC) in water originates from decaying natural organic matter and synthetic sources. The US EPA sets standards of < 2 mg/L for treated/drinking water and < 4 mg/L in source water used for treatment.
+        </p>
+        <p>
+            8. <strong>Trihalomethanes:</strong> Trihalomethanes (THMs) are chemicals that may be present in water treated with chlorine. THM levels in drinking water vary based on organic material content, chlorine dosage, and water temperature. Safe levels in drinking water are up to <strong>80 ppm</strong>.
+        </p>
+        <p>
+            9. <strong>Turbidity:</strong> Turbidity measures the presence of suspended solid matter in water. It affects water's light-transmitting properties and indicates the quality of wastewater discharge concerning colloidal matter. WHO recommends turbidity levels <strong>below 5.00 NTU</strong>; for instance, Wondo Genet Campus recorded a mean turbidity value of 0.98 NTU.
+        </p>
+        <a class="back-link" href="/">Back to Form</a>
+    </div>
+</body>
+</html>

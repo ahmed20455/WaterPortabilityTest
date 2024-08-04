@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result:</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #5AB2FF, #A0DEFF, #003285);
+            background-size: 300% 300%;
+            animation: color 5s ease-in-out infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .result-container {
+            background-color: rgba(235, 244, 246, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-data {
+            margin-bottom: 15px;
+        }
+
+        .form-data label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-data p {
+            margin: 5px 0;
+        }
+
+        .prediction-result {
+            margin-top: 20px;
+            font-size: 25px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .safe {
+            color: green;
+            animation: pulseGreen 1.5s infinite;
+        }
+
+        .not-safe {
+            color: red;
+            animation: pulseRed 1.5s infinite;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulseGreen {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulseRed {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Water Quality Prediction Result</h2>
+        
+        <div class="form-data">
+            <label for="ph">pH:</label>
+            <p>{{ ph }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="hardness">Hardness:</label>
+            <p>{{ hardness }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="solids">Solids:</label>
+            <p>{{ solids }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="chloramines">Chloramines:</label>
+            <p>{{ chloramines }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="sulfate">Sulfate:</label>
+            <p>{{ sulfate }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="conductivity">Conductivity:</label>
+            <p>{{ conductivity }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="organic_carbon">Organic Carbon:</label>
+            <p>{{ organic_carbon }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="trihalomethanes">Trihalomethanes:</label>
+            <p>{{ trihalomethanes }}</p>
+        </div>
+        
+        <div class="form-data">
+            <label for="turbidity">Turbidity:</label>
+            <p>{{ turbidity }}</p>
+        </div>
+        
+        <div class="prediction-result">
+            {% if prediction == 0.0 %}
+                <p class="not-safe">*The water is <strong>not safe</strong> to drink.*</p>
+            {% elif prediction == 1.0 %}
+                <p class="safe">*The water is <strong>safe</strong> to drink.*</p>
+            {% endif %}
+        </div>
+        <a class="back-link" href="/">Back to Form</a>
+    </div>
+</body>
+</html>
